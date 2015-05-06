@@ -1,4 +1,6 @@
-
+// Reference:
+// http://book.mixu.net/node/ch7.html
+// http://www.i-programmer.info/programming/javascript/5328-javascript-data-structures-the-linked-list.html
 var LinkedList = function() {
   this.head = null;
   this.tail = null; // storing a reference to the end of the list

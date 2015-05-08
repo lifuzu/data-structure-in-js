@@ -1,10 +1,18 @@
 // Reference:
 // http://book.mixu.net/node/ch7.html
+// http://codereview.stackexchange.com/questions/31513/linkedlist-and-binary-search-tree-in-javascript
 // http://www.i-programmer.info/programming/javascript/5328-javascript-data-structures-the-linked-list.html
-var LinkedList = function() {
-  this.head = null;
-  this.tail = null; // storing a reference to the end of the list
-}
+var Node = function(value) {
+  this.value = value;
+  this.next = null;
+  return this;
+};
+
+var LinkedList = function(newNode) {
+  this.head = newNode || null;
+  this.tail = newNode || null; // storing a reference to the end of the list
+  return this;
+};
 
 LinkedList.prototype.push = function (value) {
   var node = {
@@ -25,7 +33,7 @@ LinkedList.prototype.push = function (value) {
     this.tail.next = node;
     this.tail = this.tail.next;
   }
-}
+};
 
 module.exports = LinkedList;
 
